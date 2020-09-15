@@ -33,6 +33,8 @@ Okay, so here are some examples below (these examples use cURL but if you use so
 
 Checking if app exists (also tells its size if exists):
   curl --data '{"title_id":"CUSA09311"}' 'http://<PS4 IP>:12800/api/is_exists'
+  
+Installing pkg------------------------------------------------------------------------------------------------------------------------------------------------
 
 Installing main package (if you have multiple pieces you should specify all of them in packages array in consecutive order; if you use a merged file then you just need to specify a single element for this array):
   curl -v 'http://<PS4 IP>:12800/api/install' --data '{"type":"direct","packages":["http://<local ip>:<local port>/UP1004-CUSA03041_00-REDEMPTION000002.pkg"]}'
@@ -48,6 +50,8 @@ Installing additional content:
 
 Installing theme:
   curl -v 'http://<PS4 IP>:12800/api/install' --data '{"type":"direct","packages":["http://<local ip>:<local port>/UP0001-CUSA09311_00-ACDNEWTHEME12345.pkg"]}'
+
+Uninstalling pkg------------------------------------------------------------------------------------------------------------------------------------------------
 
 Uninstalling game:
   curl -v 'http://<PS4 IP>:12800/api/uninstall_game' --data '{"title_id":"CUSA02299"}'
